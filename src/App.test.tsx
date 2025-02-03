@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders Task Manager heading', () => {
+  const { getByText } = render(<App />);
+  const headingElement = getByText(/Task Manager/i);
+  expect(headingElement).toBeInTheDocument();
 });
